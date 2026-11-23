@@ -1,0 +1,41 @@
+:root{--ink:#152c43;--teal:#086861;--line:#cfdedc;--surface:#f3f7f6}
+body{background:var(--surface);color:var(--ink);font:1rem/1.5 "Segoe UI",system-ui,sans-serif}
+:focus-visible{outline:3px solid #108b84;outline-offset:3px}
+[hidden]{display:none!important}
+.skip{position:absolute;z-index:1;background:white;padding:.5rem}
+.mast,.heading,.actions{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem}
+.mast,.heading{justify-content:space-between}
+.mast{padding:.85rem clamp(.75rem,3vw,2.5rem);background:white;border-bottom:1px solid var(--line)}
+.brand{display:inline-flex;gap:.65rem;align-items:center;color:var(--ink);text-decoration:none;font-size:1.25rem;font-weight:750;line-height:1.15}
+.brand small{display:block;font-size:.73rem;font-weight:550}
+.mark{display:grid;place-items:center;width:2.65rem;height:2.65rem;background:var(--ink);color:white;border-radius:.6rem;border-bottom:.22rem solid #49b5a8}
+.badge-demo,.status{border-radius:.4rem;padding:.29rem .53rem;font-weight:700;font-size:.77rem;white-space:nowrap}
+.badge-demo,.status.published{background:#dff2ec;color:#0c544d}.status{background:#fff0ca;color:#614300}
+.notice{padding:.62rem clamp(.75rem,3vw,2.5rem);background:#e5eff0;margin:0;font-size:.875rem}
+#layout.with-nav{display:grid;grid-template-columns:13rem minmax(0,1fr);min-height:calc(100vh - 8rem)}
+#navigation{background:var(--ink);padding:1rem}
+#navigation a{display:block;color:#e9f2f5;padding:.65rem .75rem;border-radius:.45rem;text-decoration:none}
+#navigation a:hover,#navigation a[aria-current]{color:white;background:#2b4c64}
+#content{width:100%;max-width:90rem;min-width:0;margin-inline:auto;padding:clamp(.75rem,3vw,2.5rem)}
+h1,h2,h3{font-weight:720;letter-spacing:-.025em}
+h1{font-size:clamp(1.65rem,4vw,2.65rem)}h2{font-size:1.3rem}h3{font-size:1.05rem}
+.eyebrow{color:var(--teal);font-weight:700}
+.hero{background:var(--ink);color:white;border-radius:1rem;padding:clamp(1.15rem,5vw,4.5rem)}
+.hero h1{font-size:clamp(2.15rem,7vw,4rem)}.hero p{max-width:40rem}.hero .eyebrow{color:#86e1d4}
+.btn{min-height:44px;display:inline-flex;justify-content:center;align-items:center}
+.btn-teal{color:white;background:var(--teal);border-color:var(--teal)}.btn-teal:hover,.btn-teal:focus-visible{background:#064f49;color:white}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));gap:.75rem;margin-block:1rem}.grid>*{min-width:0}
+.panel,.metric{background:white;border:1px solid var(--line);border-radius:.8rem;padding:clamp(.8rem,2vw,1.4rem);margin-bottom:1rem}
+.grid .panel,.grid .metric{margin:0}
+.metric dt,label{font-weight:650}.metric dd{margin:.25rem 0 0;font-weight:750;font-size:1.35rem;font-variant-numeric:tabular-nums}
+.feature{background:var(--ink);color:white}.heading{margin-bottom:1rem}.heading h2{margin:0}
+.scroll-table{max-width:100%;overflow:auto}.scroll-table :is(th,td){white-space:nowrap}
+.table :is(td,th){padding:.62rem;vertical-align:middle}.table thead th{background:#e7eff2;color:var(--ink)}
+.chart li{margin-bottom:.8rem}.chart meter{width:100%;height:1.3rem}.chart meter::-webkit-meter-optimum-value{background:var(--teal)}
+.profile{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.4rem 1rem}.profile dd{overflow-wrap:anywhere;margin:0}
+.statement{max-width:48rem;margin-inline:auto}.statement-head{background:var(--ink);color:white;padding:1rem;border-radius:.5rem}
+.statement td:last-child{text-align:right;white-space:nowrap}
+dialog{width:min(34rem,calc(100vw - 1.5rem));max-height:85vh;color:var(--ink);border:1px solid var(--line)}
+dialog::backdrop{background:#152c43aa}
+@media(max-width:760px){#layout.with-nav{display:block}#navigation{display:flex;gap:.25rem;flex-wrap:wrap;padding:.45rem .65rem}#navigation a{padding:.65rem .45rem;font-size:.875rem}}
+@media print{@page{size:A4 portrait;margin:15mm}body{background:white;color:black}.mast,.notice,#navigation,.no-print,.skip{display:none!important}#layout.with-nav{display:block}#content{padding:0}.statement{width:100%;border:0;margin:0;padding:0}.statement-head{color:black;background:white;border-bottom:2px solid black}.statement table{break-inside:avoid}}
