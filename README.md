@@ -1,6 +1,6 @@
 # Malnad Staff Portal · Public Demo
 
-Interactive GitHub Pages prototype v2.0 for Malnad Skill Development Centre. Choose **Try as Principal**, **Try as Admin**, or **Try as Staff** to explore the simulated role-specific workflows. All employee data is fictional. Public demo credentials are displayed on the login screen; staff accounts MAL001–MAL015 share the displayed staff demo password. Changes are local to the browser, and the principal can reset the demo from Settings.
+Interactive GitHub Pages prototype v2.1 for Malnad Skill Development Centre. Choose **Try Principal Demo**, **Try Admin Demo**, or **Try Staff Demo** to explore the simulated role-specific workflows. All employee data is fictional. Public demo credentials are displayed on the login screen; staff accounts MAL001–MAL015 share the displayed staff demo password. Changes are local to the browser, and the principal can reset the demo from Settings.
 
 ## Local preview
 
