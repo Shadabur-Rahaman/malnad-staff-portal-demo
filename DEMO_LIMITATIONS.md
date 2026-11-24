@@ -1,5 +1,5 @@
 # Demo limitations
 
-The principal and employee views are public role simulations. The demo ships 15 fictional staff profiles and two sample pay periods in JavaScript. Visitors can inspect every fixture. The employee view shows October as the published month. Draft bonus previews use temporary browser memory and leave the original figures intact.
+Principal, admin and staff views are public role simulations. Visitors can inspect every fixture and browser-storage record. The demo ships 15 fictional staff profiles and two initial payroll periods; changes persist locally, not across devices. Photos are cropped and stored in browser storage only. Use fictional images and contact information exclusively. No real credentials or payroll records may be entered.
 
-The printable HTML payslip and client-side CSV are demonstration files. The separate Django system handles authentication, employee-level authorization, payroll publication, audit history, private PDF and Excel exports, and database persistence.
+The A4 client-side PDF writer renders pages as images, so PDF text is not selectable or screen-reader accessible. Browser-level PDF inspection remains outstanding. The separate Django system is outside this task and remains unchanged. Production requires secure server-side authentication, authorization, persistence and confidential report delivery. A future Student Progress Tracker is explicitly deferred and not included.

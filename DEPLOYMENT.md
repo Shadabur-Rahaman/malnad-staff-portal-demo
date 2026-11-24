@@ -12,11 +12,15 @@ $repo = "$owner/malnad-staff-portal-demo"
 gh repo view $repo --json nameWithOwner,isPrivate,url,defaultBranchRef
 ```
 
-If the repository does not exist and GitHub returned HTTP 404, run `gh repo create $repo --public`. If Git is uninitialised, run `git init -b main`, explicitly add `.github`, `site`, `tests` and the four Markdown files, then commit. Verify `git rev-parse --show-toplevel` and `git ls-tree -r --name-only HEAD`. Set the destination and push.
+The existing verified local remote is `https://github.com/shadabur-rahaman/malnad-staff-portal-demo.git`. Do not create another repository. Confirm the authenticated identity and ownership before publishing. Review the diff and run the tests before committing.
 
 ```powershell
-git remote add origin "https://github.com/$repo.git"
-git push -u origin main
+npm test
+git diff --check
+git status --short
+git add site tests README.md DEMO_LIMITATIONS.md SECURITY_CHECKLIST.md DEPLOYMENT.md
+git commit -m "Upgrade staff portal to v2.0 demo"
+git push origin main
 ```
 
 In **Settings → Pages → Source**, select **GitHub Actions**. Start the workflow and verify the completed run.
@@ -27,4 +31,4 @@ gh run list --workflow pages.yml --repo $repo --limit 5
 gh api "repos/$repo/pages" --jq .html_url
 ```
 
-Open the returned URL, test both demo roles and inspect static asset requests. [GitHub Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+Open the returned URL, test all three demo roles, download and inspect PDFs, check photo and payroll workflows, and verify layouts at 320, 360, 375, 390, 430, 768, 1024 and 1440 px. Do not mark deployment successful until the new version is visible. [GitHub Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)

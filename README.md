@@ -1,6 +1,6 @@
 # Malnad Staff Portal · Public Demo
 
-Interactive GitHub Pages prototype for Malnad Skill Development Centre. Choose **View as Principal** to explore staff management, draft payroll and reports. Choose **View as Employee** to inspect published salary history and print a sample payslip. All employee data is fictional.
+Interactive GitHub Pages prototype v2.0 for Malnad Skill Development Centre. Choose **Try as Principal**, **Try as Admin**, or **Try as Staff** to explore the simulated role-specific workflows. All employee data is fictional. Public demo credentials are displayed on the login screen; staff accounts MAL001–MAL015 share the displayed staff demo password. Changes are local to the browser, and the principal can reset the demo from Settings.
 
 ## Local preview
 
